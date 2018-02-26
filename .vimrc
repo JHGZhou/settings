@@ -35,7 +35,6 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 map <space> /
 map <c-space> ?
 
-set relativenumber
 set number
 
 command W w !sudo tee % > /dev/null
