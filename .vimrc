@@ -1,3 +1,7 @@
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 set autoread
 set ruler
 set backspace=eol,start,indent
@@ -9,16 +13,15 @@ set foldcolumn=1
 
 syntax enable
 if $COLORteRM == 'gnome-terminal'
-	set t_Co=256
+    set t_Co=256
 endif
-
-try
-	colorscheme desert
+try 
+    colorscheme desert
 catch
 endtry
 
 set expandtab
-set smarttab
+set smartindent
 set shiftwidth=4
 set tabstop=4
 
@@ -37,6 +40,7 @@ set number
 
 command W w !sudo tee % > /dev/null
 
+inoremap jk <ESC>
 map w b
 map q ^
 map r $
