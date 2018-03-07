@@ -1,8 +1,17 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline_theme='hybrid'
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
 
 set autoread
+set hidden
 set ruler
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -16,7 +25,7 @@ if $COLORteRM == 'gnome-terminal'
     set t_Co=256
 endif
 try 
-    colorscheme desert
+    colorscheme koehler
 catch
 endtry
 
