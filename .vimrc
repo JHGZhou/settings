@@ -14,6 +14,7 @@ let g:airline_right_sep = ''
 let g:airline_left_alt_sep= ''
 let g:airline_left_sep = ''
 
+set nocompatible
 set autoread
 set hidden
 set ruler
@@ -52,8 +53,12 @@ set number
 
 command W w !sudo tee % > /dev/null
 
+let mapleader = "'"
 inoremap jk <ESC>
-map w b
-map q ^
-map r $
-map ; :
+nmap w b
+nmap q ^
+nmap r $
+nmap ; :
+nmap <leader>h :bprevious<CR>
+nmap <leader>l :bnext<CR>
+map <leader>n :NERDTreeToggle<CR>
