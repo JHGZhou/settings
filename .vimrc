@@ -1,3 +1,4 @@
+"REQUIREMENTS: pathogen, airline, airline themes, nerdtree
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
